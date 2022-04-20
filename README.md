@@ -1,10 +1,10 @@
 
 ## Team Members
 
-Ghanashri Mariyanna
-Akshara Narayana
-Pratik Dabre
-Prashanth Adapa
+Ghanashri Mariyanna <br />
+Akshara Narayana <br />
+Pratik Dabre <br />
+Prashanth Adapa <br />
 
 # Project Idea Description:
 
