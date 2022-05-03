@@ -441,13 +441,13 @@ cols = ('FireplaceQu', 'BsmtQual', 'BsmtCond', 'GarageQual', 'GarageCond',
         'BsmtFinType2', 'Functional', 'Fence', 'BsmtExposure', 'GarageFinish', 'LandSlope',
         'LotShape', 'PavedDrive', 'Street', 'Alley', 'CentralAir', 'MSSubClass', 'OverallCond', 
         'YrSold', 'MoSold')
-# process columns, apply LabelEncoder to categorical features
+
+# Below we process columns, apply LabelEncoder to categorical features
 for c in cols:
     lbl = LabelEncoder() 
     lbl.fit(list(Complete_Test_and_Train_Data[c].values)) 
     Complete_Test_and_Train_Data[c] = lbl.transform(list(Complete_Test_and_Train_Data[c].values))
-
-# shape        
+      
 print('Shape all_data: {}'.format(Complete_Test_and_Train_Data.shape))
 
 """#### Adding one more important feature
@@ -468,9 +468,7 @@ skewness = pd.DataFrame({'Skew' :skewed_feats})
 skewness.head(10)
 
 """#### Box Cox Transformation of (highly) skewed features
-We use the scipy function boxcox1p which computes the Box-Cox transformation of  1+x .
-
-Note that setting  λ=0  is equivalent to log1p used above for the target variable.
+We use the scipy function boxcox1p which computes the Box-Cox transformation of  1+x . we need to note that setting  λ=0  is equivalent to log1p used above for the target variable.
 
 
 """
