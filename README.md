@@ -9,7 +9,7 @@
 ## Team Members:avprashanth Aksh-Narayana pdabre12
 
 1. Ghanashri Mariyanna (https://github.com/Ghanashri-m) <br />
-2. Akshara Narayana () <br />
+2. Akshara Narayana (https://github.com/Aksh-Narayana) <br />
 3. Pratik Dabre (https://github.com/pdabre12) <br />
 4. Prashanth Adapa (https://github.com/avprashanth) <br />
 
