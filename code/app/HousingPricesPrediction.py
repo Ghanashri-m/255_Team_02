@@ -468,9 +468,7 @@ skewness = pd.DataFrame({'Skew' :skewed_feats})
 skewness.head(10)
 
 """#### Box Cox Transformation of (highly) skewed features
-We use the scipy function boxcox1p which computes the Box-Cox transformation of  1+x .
-
-Note that setting  λ=0  is equivalent to log1p used above for the target variable.
+We use the scipy function boxcox1p which computes the Box-Cox transformation of  1+x . we need to note that setting  λ=0  is equivalent to log1p used above for the target variable.
 
 
 """
