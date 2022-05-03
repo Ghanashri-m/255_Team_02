@@ -1,4 +1,4 @@
-## 1. Project Title: House Price Prediction
+#### 1. Project Title: House Price Prediction
 
 ## Team Members
 
