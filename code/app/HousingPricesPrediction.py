@@ -441,13 +441,13 @@ cols = ('FireplaceQu', 'BsmtQual', 'BsmtCond', 'GarageQual', 'GarageCond',
         'BsmtFinType2', 'Functional', 'Fence', 'BsmtExposure', 'GarageFinish', 'LandSlope',
         'LotShape', 'PavedDrive', 'Street', 'Alley', 'CentralAir', 'MSSubClass', 'OverallCond', 
         'YrSold', 'MoSold')
-# process columns, apply LabelEncoder to categorical features
+
+# Below we process columns, apply LabelEncoder to categorical features
 for c in cols:
     lbl = LabelEncoder() 
     lbl.fit(list(Complete_Test_and_Train_Data[c].values)) 
     Complete_Test_and_Train_Data[c] = lbl.transform(list(Complete_Test_and_Train_Data[c].values))
-
-# shape        
+      
 print('Shape all_data: {}'.format(Complete_Test_and_Train_Data.shape))
 
 """#### Adding one more important feature
