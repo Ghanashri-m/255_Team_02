@@ -1,13 +1,10 @@
 # 1. Project Title: House Price Prediction
 
-## Professor:
-### Carlos Rojas
+## Professor: Carlos Rojas
 
-## Term:
-### Spring 2022
+## Term: Spring 2022
 
-## Team Number:
-### 02
+## Team Number: 02
 
 ## Team Members:avprashanth Aksh-Narayana pdabre12
 
