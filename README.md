@@ -1,14 +1,17 @@
 # 1. Project Title: House Price Prediction
 
-## Professor:
-### Carlos Rojas
+## Professor: Carlos Rojas
 
-## Team Members
+## Term: Spring 2022
 
-Ghanashri Mariyanna <br />
-Akshara Narayana <br />
-Pratik Dabre <br />
-Prashanth Adapa <br />
+## Team Number: 02
+
+## Team Members:avprashanth Aksh-Narayana pdabre12
+
+1. Ghanashri Mariyanna (https://github.com/Ghanashri-m) <br />
+2. Akshara Narayana () <br />
+3. Pratik Dabre (https://github.com/pdabre12) <br />
+4. Prashanth Adapa (https://github.com/avprashanth) <br />
 
 ## 2. Dataset from Ongoing Kaggle Competition: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
 
