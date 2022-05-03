@@ -59,23 +59,28 @@ test_dataset = copy_test
 
 """# Data Outliers Visualization"""
 
-#Identifying the outliers by comparing the feature "LotArea" with SalePrice.
+#Identifying the outliers by comparing the feature "LotArea" & "GrLivArea" with SalePrice.
+#We're comparing the feature LotArea against SalePrice to see if there are any abnormal values. After generating a plot, we can see that there are few values have bigger LotArea but at a very low SalePrice. These values will not be useful to our model, Hence we defined a range and removed the values that fall out of the defined range for two features, i.e., LotArea and GrLivArea againt the SalePrice (Target Variable)
 
-fig, ax = plt.subplots(figsize=(15, 12))
-ax.scatter(x = housing_dataset['LotArea'], y = housing_dataset['SalePrice'], marker = "*", edgecolors = "Green")
-plt.ylabel('SalePrice', fontsize=13)
-plt.xlabel('LotArea', fontsize=13)
-plt.show()
+def outlier_visualization(feature):
+    fig, ax = plt.subplots(figsize=(10, 10))
+    ax.scatter(x = housing_dataset[feature], y = housing_dataset['SalePrice'], marker = "*", edgecolors = "Green")
+    plt.ylabel('SalePrice', fontsize=13)
+    plt.xlabel(feature, fontsize=13)
+    plt.show()
+
+outlier_visualization('LotArea')
+outlier_visualization('GrLivArea')
 
 #Deleting outliers by defining the range
-housing_dataset = housing_dataset.drop(housing_dataset[(housing_dataset['LotArea']>100000) & (housing_dataset['SalePrice']<300000)].index)
+housing_dataset = housing_dataset.drop(housing_dataset[(housing_dataset['LotArea']>100000) & (housing_dataset['SalePrice']<400000)].index)
 
 #Lets plot the graph again to see if the outliers are removed.
-fig, ax = plt.subplots(figsize=(15, 12))
-ax.scatter(housing_dataset['LotArea'], housing_dataset['SalePrice'], marker = "*", edgecolors = "Green")
-plt.ylabel('SalePrice', fontsize=13)
-plt.xlabel('LotArea', fontsize=13)
-plt.show()
+outlier_visualization('LotArea')
+
+housing_dataset = housing_dataset.drop(housing_dataset[(housing_dataset['GrLivArea']>4000) & (housing_dataset['SalePrice']<300000)].index)
+outlier_visualization('GrLivArea')
+
 
 """# Clean the Data"""
 
@@ -198,10 +203,15 @@ for bar, angle, height, label in zip(bars,angles, heights, sorted_null_df["Featu
         rotation=rotation, 
         rotation_mode="anchor")
 
-#Correlation map to see how features are correlated with SalePrice
-corrmat = housing_dataset.corr()
-plt.subplots(figsize=(15,12))
-sns.heatmap(corrmat, vmax=0.9, square=True)
+"""## Data Correlation"""
+#Correlation map to see how the Housing Dataset features are correlated with SalePrice
+
+def correlation_matrix():
+    corr_matrix = housing_dataset.corr()
+    plt.subplots(figsize=(15,12))
+    sns.color_palette("bright")
+    sns.heatmap(corr_matrix, vmax=0.9, square=True, cmap="Blues")
+correlation_matrix()
 
 """## Imputing Missing Values"""
 
