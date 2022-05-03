@@ -367,9 +367,9 @@ Complete_Test_and_Train_Data.isnull().sum().sum()
 Complete_Test_and_Train_Data.index = Complete_Test_and_Train_Data.index - 1
 
 """# Feature Engineering
-Log-transformation of skewed target variable
+As part of Feature Engineering we are performing 'Logarithm transformation' of skewed target variable - 'SalePrice'
 
-Log-transformation is a technique used to perform Feature Transformation. It is one of the many techniques that can be used to transform the features so that they are treated equally.
+Log-transformation is a technique used to perform Feature Transformation. It is one of the many techniques that can be used to transform the features so that they are treated equally. This method helps to handle skewed data and after transformation, the distribution becomes more approximate to normal. Log-Tranform method is majorly used to decreases the effect of the outliers, due to the normalization of magnitude differences so that the model becomes more robust.
 
 Why do we want models to treat them equally? It is because when we input these features to the model, there is a posibillity that an larger value in an imbalance feature will influence the result more and further affect the model performance. This is not something we will want as each and every row of data are equally important as a predictor.
 
@@ -380,7 +380,7 @@ We picked log-transformation here as it has the power to alter the skewness of a
 
 # Distribution plot
 y = copy_train['SalePrice']
-fig = plt.figure(figsize=(15,12))
+fig = plt.figure(figsize=(10,10))
 sns.distplot(y , fit=norm);
 
 (mu, sigma) = norm.fit(y)
@@ -392,22 +392,21 @@ plt.ylabel('Frequency')
 plt.title('SalePrice distribution')
 
 # QQ-plot
-fig = plt.figure(figsize=(15,12))
+fig = plt.figure(figsize=(10,10))
 res = probplot(y, plot=plt)
 plt.show()
 
-"""The first plot is a distribution plot where we compare the distribution of our target variable with a normal distribution.
-We can easily see it is right-skewed.
+"""The first plot is a distribution plot where we compare the distribution of our target variable with a normal distribution. It can be observed that it is right-skewed.
 
 The Q-Q plot below plots the quantiles of our target feature against the quantiles of a normal distribution.
-We can also easily see the skewness in the target feature.
+We can also clearly see the skewness in the target feature.
 
 Notice how it changes after we apply log transformation onto our feature.
 """
 
 y = np.log( copy_train['SalePrice'])
 
-fig = plt.figure(figsize=(15,12))
+fig = plt.figure(figsize=(10,10))
 sns.distplot(y , fit=norm);
 (mu, sigma) = norm.fit(y)
 print( '\n mu = {:.2f} and sigma = {:.2f}\n'.format(mu, sigma))
@@ -416,7 +415,7 @@ plt.legend(['Normal dist. ($\mu=$ {:.2f} and $\sigma=$ {:.2f} )'.format(mu, sigm
 plt.ylabel('Frequency')
 plt.title('SalePrice distribution')
 
-fig = plt.figure(figsize=(15,12))
+fig = plt.figure(figsize=(10,10))
 res = probplot(y, plot=plt)
 plt.show()
 
