@@ -35,6 +35,7 @@ Will be comparing the results accuracy and apply the best of the 2 models, on th
 ### 5.1. Extracting, Preprocessing and Curating the dataset: 
 
 Datasets
+
 Train Dataset: This dataset is a collection of data curated from Ames Housing Dataset. This dataset has data with 81 features including the target variable, SalePrice.
 Test Dataset: This is the test dataset which has exact same features as in train dataset except for the target variable.
 
@@ -44,4 +45,9 @@ Later, we analyzed both numerical and categorical columns present in our dataset
 
 Imputed missing values in categorical columns which contained fewer null values, converted few numerical coulumns as categorical columns. Implemented variance plotting for categorical columns and dropped columns that showed high variance.
 
+### 5.2. Analysis and Feature Addition
+
+We plotted relationships between numerical columns with target variable and we determined that combining few features to create new features would lead us with qualitative data. Example, as we know that a Sale Price of a house is proportional to age of the house, we generated a new feature based on house-built year and house sold year to determine the age of the house. We used scatter plots to analyse few features with respect to Target variable – SalePrice, to detect the outliers. It was observed that few datapoints are very abnormal and would be of now use to our model, hence, we dropped such outliers by defining a meaningful range of values to our features. Plotted graphs for data outlier visualization before and after handling outliers. Plotted a correlation map to analyse how the given features are related to our target value. As part of Feature Engineering, we performed Logarithm transformation of skewed target variable - 'SalePrice'. This method helps to handle skewed data and after transformation, the distribution becomes more approximate to normal. Log-Tranform method is majorly used to decreases the effect of the outliers, due to the normalization of magnitude differences so that the model becomes more robust.
+
+![image](https://user-images.githubusercontent.com/99863530/166649613-f39ffe39-5853-4217-881a-01b0ac4745f9.png)
 
