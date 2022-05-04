@@ -30,4 +30,16 @@ We will be using advanced regression models (supervised methods) like <br />
 Will be comparing the results accuracy and apply the best of the 2 models, on the final test data.
 
 
+## 5. Preliminary Analysis
+
+5.1. Extracting, Preprocessing and Curating the dataset: 
+
+Datasets
+Train Dataset: This dataset is a collection of data curated from Ames Housing Dataset. This dataset has data with 81 features including the target variable, SalePrice.
+Test Dataset: This is the test dataset which has exact same features as in train dataset except for the target variable.
+
+Initially, we merged train dataset and test dataset to attain enough data for us to perform furether processes such as analysis and training the model.
+
+
+
 
