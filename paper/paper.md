@@ -20,6 +20,9 @@ The training dataset comprises 1460 observations and 79 explanatory variables, w
 ## Initial Data Analysis
 Examining the data is one of the first and most crucial processes in data analysis. We can observe that there are missing values in the dataset based on the count. We can also see that the mean and standard deviation differences between variables are rather big.
 
+<img width="1028" alt="Screen Shot 2022-05-13 at 12 02 07 PM" src="https://user-images.githubusercontent.com/39545809/168371039-11ac42b9-8d22-4f72-b422-7b790a714a44.png">
+
+
 Many of the "NAs" were recorded because the particular variable was not present in the dwelling, which was unique to our dataset. As a result, some values (mainly from categorical variables) have been replaced with "0." We were able to manage the majority of the missing data this way.
 
 
