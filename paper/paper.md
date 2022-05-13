@@ -1,11 +1,8 @@
 ---
-title: Semester Project [rename]
-date: "October 2021"
-author: Carlos Rojas, San José State University
-
-header-includes: |
-  \usepackage{booktabs}
-  \usepackage{caption}
+title: House Price Prediction
+date: "Spring 2022"
+author: Ghanashri Mariyanna, San José State University
+guidance: Prof. Carlos Rojas, San José State University
 ---
 
 # Abstract
