@@ -22,12 +22,9 @@ Essentially, the project can be divided into two parts: First part, a deep dive 
 
 ## 4. Potential Approach
 
-We will be using advanced regression models (supervised methods) like <br />
+We will be using advanced regression models (supervised methods)<br />
 
-1. Random Forest Model
-2. Gradient Boosting Regressor
-
-Will be comparing the results accuracy and apply the best of the 2 models, on the final test data.
+and will be comparing the results accuracy and apply the best of the 2 models, on the final test data.
 
 
 ## 5. Preliminary Analysis
