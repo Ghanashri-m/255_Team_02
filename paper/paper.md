@@ -2,7 +2,7 @@
 title: House Price Prediction
 date: "Spring 2022"
 author: Ghanashri Mariyanna, San José State University
-guidance: Prof. Carlos Rojas, San José State University
+guidance: Prof. Carlos Rojas, San José State University,
 title: House Price Prediction
 date: "Spring 2022"
 author: Ghanashri Mariyanna, San José State University
