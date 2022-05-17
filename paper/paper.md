@@ -1,8 +1,8 @@
 ---
-Title: House Price Prediction
-Date: "Spring 2022"
-Authors: Prashanth Adapa, Ghanashri Mariyanna, Akshara Narayana, Pratik Dabre, San José State University
-Guidance: Prof. Carlos Rojas, San José State University,
+Title : House Price Prediction
+Date : "Spring 2022"
+Authors (San Jose State University) : Prashanth Adapa, Ghanashri Mariyanna, Akshara Narayana, Pratik Dabre
+Guidance (San José State University) : Prof. Carlos Rojas
 ---
 
 
@@ -28,7 +28,7 @@ For clear visualization of the missing data, we were also able to identify count
 
 ![download](https://user-images.githubusercontent.com/75163512/168749678-a42faf23-6e9b-4cd9-b2e3-a9e9e3106d6e.png)
 
-- We performed column wise variance plotting and eliminated few columns for which the distribution of data is very uneven in those columns.
+- We performed column wise variance plotting and eliminated few columns in which the distribution of data is very uneven.
 
 - We have split our data to both numerical and categorical columns and **imputed** data for selected colummns after checking unique values in each of the columns and replacing with those which we felt most accurate. We later extracted data for columns which contained less than or equal to 9 unique values and extracted to a csv file to read and understand the data better for encoding.
 
