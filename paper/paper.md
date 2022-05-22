@@ -56,7 +56,7 @@ Notice how it changes after we apply log transformation onto our feature.
 
 ### Variance
 
-- We performed column wise variance plotting and eliminated few columns in which the distribution of data is very uneven.
+- After performing the column wise variance plotting for all the columns. We eliminated few columns in which the distribution of data was very uneven.
 
 ### Imputation of Null values
 - The housing data comprised of both Numerical and Categorical columns and there were null values that needed to be cleaned and imputed in both of them.
