@@ -6,7 +6,8 @@ Guidance (San José State University) : Prof. Carlos Rojas
 ---
 
 
-# Abstract
+## Abstract
+Building a machine learning model that can predict the house prices based on various describing attributes. The dataset used is the Ames Housing dataset. It contains of 79 explanatory variables which describe every aspect of residential homes in Ames, Iowa. The data is first cleaned and then imputed in different machine learning models for comparison of their performance. Through the data analysis and observations summarized in this paper, a machine learning model which can effectively predict the housing prices is finalized and used for house price prediction, with the understanding that the algorithm can still be improved using advanced machine learning algorithms.
 
 ## Introduction
 Every day, thousands of houses are sold but there are questions that every buyer asks, such as: *What is the true value of this house? Is the price I'm paying reasonable?* A machine learning model is proposed in this research to forecast a property price based on data about the house (size, construction details, age, amenities etc.) We present the code used at each stage followed by the results obtained during the construction and evaluation of our model to make our work more reproducible. Python programming language has been utilized in this study, along with a variety of Python packages and interesting libraries.
