@@ -11,7 +11,7 @@ Guidance (San José State University) : Prof. Carlos Rojas
 Build a Machine Learning model that, given the various attributes of the house, can predict the price of the house. We’re going to use the Ames Housing Dataset in this project. It contains the relevant information and covers numerous attributes. House prices depend on an individual house specification. The performance will be measured upon predicting house prices since the prediction in many regression algorithms relies not only on a specific feature but on an unknown number of attributes that result in the value to be predicted. 
 
 ## Introduction
-Every day, thousands of homes are sold. There are some questions that every buyer asks himself, such as: What is the true value of this home? Is the price I'm paying reasonable? A machine learning model is proposed in this research to forecast a property price based on data about the house (size, year it was built, etc.). We will show the code used for each stage followed by its results during the construction and evaluation of our model. Our work will be more reproducible as a result of this. The Python programming language will be utilized in this study, along with a variety of Python packages.
+Every day, thousands of homes are sold. There are some questions that every buyer asks himself, such as: What is the true value of this home? Is the price I'm paying reasonable? A machine learning model is proposed in this research to forecast a property price based on data about the house (size, year it was built, etc.). We will show the code used for each stage followed by its results during the construction and evaluation of our model. Our work will be more reproducible as a result of this. The Python programming language will be utilized in this study, along with a variety of Python packages such as numpy, pandas, seaborn, matplotlib, missingno, scipy, sklearn.
 
 ## Background
 Dean De Cock produced the Ames Housing dataset for use in data science courses. It's a fantastic alternative for data scientists looking for an updated and enhanced version of the well-known Boston Housing dataset. Dataset used can be found here https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
@@ -21,7 +21,7 @@ The training dataset comprises 1460 observations and 79 explanatory variables, w
 ## Goals of the Study
 The following are the study's primary goals: <br />
 • Build machine learning models capable of predicting property price based on house features  <br />
-• Analyze and compare model performance to select the best model
+• Analyze and compare performance of all the models and chose the best model to predict the Sale Price of a House.
 
 ## Methods
 - The Dataset created has multiple features ranging from the Garage area, the basement condition, the living area to the Fireplace quality for the houses. 
