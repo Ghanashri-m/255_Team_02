@@ -6,7 +6,7 @@
 
 ### Team Number: 02
 
-##$ Team Members:
+### Team Members:
 
 1. Ghanashri Mariyanna (https://github.com/Ghanashri-m) <br />
 2. Akshara Narayana (https://github.com/Aksh-Narayana) <br />
