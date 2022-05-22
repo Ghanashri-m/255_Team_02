@@ -21,7 +21,7 @@ The training dataset comprises 1460 observations and 79 explanatory variables, w
 <img width="1028" alt="Screen Shot 2022-05-13 at 12 02 07 PM" src="https://user-images.githubusercontent.com/39545809/168371039-11ac42b9-8d22-4f72-b422-7b790a714a44.png">
 
 For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. 
-
+<!-- _backgroundColor: "#fff" -->
 ![download](https://user-images.githubusercontent.com/75163512/168749122-99e5dfed-6a2e-4a7a-9bba-7d8152f65c9c.png)
 
 - To better understand the correlation between columns we plotted a Dendogram which helped us generate a tree-like graph through hierarchical clustering and group together the columns that have strong correlations in nullity.
