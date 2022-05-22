@@ -1,4 +1,4 @@
-# 1. Project Title: House Price Prediction
+# Project Title: House Price Prediction
 
 ### Professor: Carlos Rojas
 
@@ -13,7 +13,7 @@
 3. Pratik Dabre (https://github.com/pdabre12) <br />
 4. Prashanth Adapa (https://github.com/avprashanth) <br />
 
-## 2. Dataset from Ongoing Kaggle Competition: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
+### Dataset from Ongoing Kaggle Competition: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
 
 ### Instruction to Run the Project:
 
