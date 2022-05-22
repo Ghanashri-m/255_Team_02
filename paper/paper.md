@@ -21,16 +21,16 @@ The training dataset comprises 1460 observations and 79 explanatory variables, w
 <img width="1028" alt="Screen Shot 2022-05-13 at 12 02 07 PM" src="https://user-images.githubusercontent.com/39545809/168371039-11ac42b9-8d22-4f72-b422-7b790a714a44.png">
 
 For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. 
-<!-- _backgroundColor: "#fff" -->
+
 ![download](https://user-images.githubusercontent.com/75163512/168749122-99e5dfed-6a2e-4a7a-9bba-7d8152f65c9c.png)
 
-- To better understand the correlation between columns we plotted a Dendogram which helped us generate a tree-like graph through hierarchical clustering and group together the columns that have strong correlations in nullity.
+- To better understand the correlation between columns we plotted a Dendogram which is essentially a tree-like graph, that group together the columns that have strong correlations in nullity through hierarchical clustering.
 
 ![download](https://user-images.githubusercontent.com/75163512/168749678-a42faf23-6e9b-4cd9-b2e3-a9e9e3106d6e.png)
 
 - We performed column wise variance plotting and eliminated few columns in which the distribution of data is very uneven.
 
-- We have split our data to both numerical and categorical columns and **imputed** data for selected colummns after checking unique values in each of the columns and replacing with those which we felt most accurate. We later extracted data for columns which contained less than or equal to 9 unique values and extracted to a csv file to read and understand the data better for encoding.
+- We split our data in to both numerical and categorical columns and **imputed** data for selected columns after checking unique values in each of the columns and replacing with those which we felt most accurate. We later extracted data for columns which contained less than or equal to 9 unique values and extracted to a csv file to read and understand the data better for encoding.
 
 ### Label Encoding
 - The extracted unique_vals dataset contains information on the categorical columns and the count of unique values in each of these columns. Using this dataset we were able to plot bar charts and analyse the data : 
