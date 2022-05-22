@@ -8,10 +8,8 @@ Guidance (San José State University) : Prof. Carlos Rojas
 
 # Abstract
 
-Build a Machine Learning model that, given the various attributes of the house, can predict the price of the house. We’re going to use the Ames Housing Dataset in this project. It contains the relevant information and covers numerous attributes. House prices depend on an individual house specification. The performance will be measured upon predicting house prices since the prediction in many regression algorithms relies not only on a specific feature but on an unknown number of attributes that result in the value to be predicted. 
-
 ## Introduction
-Every day, thousands of homes are sold. There are some questions that every buyer asks himself, such as: What is the true value of this home? Is the price I'm paying reasonable? A machine learning model is proposed in this research to forecast a property price based on data about the house (size, year it was built, etc.). We will show the code used for each stage followed by its results during the construction and evaluation of our model. Our work will be more reproducible as a result of this. The Python programming language will be utilized in this study, along with a variety of Python packages such as numpy, pandas, seaborn, matplotlib, missingno, scipy, sklearn.
+Every day, thousands of homes are sold. There are some questions that every buyer asks himself, such as: What is the true value of this home? Is the price I'm paying reasonable? A machine learning model is proposed in this research to forecast a property price based on data about the house (size, year it was built, etc.). We will show the code used for each stage followed by its results during the construction and evaluation of our model. Our work will be more reproducible as a result of this. The Python programming language will be utilized in this study, along with a variety of Python packages.
 
 ## Background
 Dean De Cock produced the Ames Housing dataset for use in data science courses. It's a fantastic alternative for data scientists looking for an updated and enhanced version of the well-known Boston Housing dataset. Dataset used can be found here https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
@@ -21,7 +19,7 @@ The training dataset comprises 1460 observations and 79 explanatory variables, w
 ## Goals of the Study
 The following are the study's primary goals: <br />
 • Build machine learning models capable of predicting property price based on house features  <br />
-• Analyze and compare performance of all the models and chose the best model to predict the Sale Price of a House.
+• Analyze and compare model performance to select the best model
 
 ## Methods
 - The Dataset created has multiple features ranging from the Garage area, the basement condition, the living area to the Fireplace quality for the houses. 
@@ -52,7 +50,7 @@ We wouldn't want the model to prioritize predicting only data with higher sale p
 
 We picked log-transformation here as it has the power to alter the skewness of a distribution towards normality. We were able to observe how log-transformation of a feature could transform the data distribution and scale.
 
-We first plotted a distribution plot where we compared the distribution of our target variable with a normal distribution. We were ble to observe that it was right-skewed. After the log transformation, we again plotted a graph with respect to the quantiles of our target feature against the quantiles of a normal distribution. We've just applied a log transformation to the 'SalePrice' variable, reducing its skew and resulting in a more or less regularly distributed variable.
+We first plotted a distribution plot where we compared the distribution of our target variable with a normal distribution. We were ble to observe that it was right-skewed. After the log transformation, we again plotted a graph with respect to the quantiles of our target feature against the quantiles of a normal distribution. We've just applied a log transformation to the 'SalePrice' variable, reducing its skew and resulting in a more or less regularly distributed variable. 
 
 Notice how it changes after we apply log transformation onto our feature.
 
@@ -79,11 +77,25 @@ Notice how it changes after we apply log transformation onto our feature.
 - We concluded that few of these categorical columns (which contained less than 9 unique values) can be encoded by label encoder and we converted these columns to numeric.
 
 ### Feature Addition
+we determined that combining few features to create new features would lead us with qualitative data. We understood that a Sale Price of a house is proportional to age of the house, so we generated a new feature based on house-built year and house sold year to determine the age of the house.
 
-- We plotted relationships between numerical columns with target variable and we determined that combining few features to create new features would lead us with qualitative data. We understood that a Sale Price of a house is proportional to age of the house, so we generated a new feature based on house-built year and house sold year to determine the age of the house. We used scatter plots to analyse few features with respect to Target variable – SalePrice, to detect the outliers. It was observed that few datapoints are very abnormal and would be of now use to our model, hence, we dropped such outliers by defining a meaningful range of values to our features. Plotted graphs for data outlier visualization before and after handling outliers. Plotted a correlation map to analyse how the given features are related to our target value. As part of Feature Engineering, we performed Logarithm transformation of skewed target variable - 'SalePrice'. This method helps to handle skewed data and after transformation, the distribution becomes more approximate to normal. Log-Tranform method is majorly used to decreases the effect of the outliers, due to the normalization of magnitude differences so that the model becomes more robust.
-
+### Data Correlation
 ![166649613-f39ffe39-5853-4217-881a-01b0ac4745f9](https://user-images.githubusercontent.com/75163512/168747937-9d5d2045-c4dd-4c81-b048-a2166e050696.png)
 
+### Exploratory Data Analysis
+We used visuals to explore the data in this part. This helped us better comprehend the data and the relationships between variables, allowing us to develop a more accurate model.
+Our data set contains 80 columns. It would take a long time to visualize all of the data. Hence we looked in to variables that are strongly associated (both positively and negatively) with our goal variable, "SalePrice." We generated a heatmap of connected data to help us think visually.
+From the heat map we were able to conclude that, the garage space, general living area, and overall quality metric are all substantially connected with our goal variable. We then went ahead and visualized each of these column data with our target variable to better our understanding of the relation between them. 
+
+From the above visualizations, we were able to conclude that
+
+- 'SalePrice' and 'GarageArea' have a linear connection so does OverallQual and SalePrice.
+- The distribution of 'YearBuilt' is biased towards the year 2000 and has a lengthy tail that stretches till 1900, according to the univariate plot. In the case of newly constructed residences, the linear link between the factors is more obvious.
+- GarageYrBlt is similarly substantially negatively linked with the target variable, therefore there was no discernible trend in the data.
+- YearRemodAdd has a linear relationship with SalePrice.
+- In case of Full bath, there is no trend in data. It is highly negatively correlated with our target variable. But this helps the model to predict better.
+- TotalBsmtSF has a strong linear trend and is substantially linked with our objective variable SalePrice
+- There's strong link between 'SalePrice' and 'GrLivArea.'
 
 # Comparisons
 
