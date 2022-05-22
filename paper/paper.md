@@ -9,7 +9,7 @@ Guidance (San José State University) : Prof. Carlos Rojas
 # Abstract
 
 ## Introduction
-Every day, thousands of homes are sold. There are some questions that every buyer asks himself, such as: What is the true value of this home? Is the price I'm paying reasonable? A machine learning model is proposed in this research to forecast a property price based on data about the house (size, year it was built, etc.). We will show the code used for each stage followed by its results during the construction and evaluation of our model. Our work will be more reproducible as a result of this. The Python programming language will be utilized in this study, along with a variety of Python packages.
+Every day, thousands of houses are sold but there are questions that every buyer asks, such as: *What is the true value of this house? Is the price I'm paying reasonable?* A machine learning model is proposed in this research to forecast a property price based on data about the house (size, construction details, age, amenities etc.) We present the code used at each stage followed by the results obtained during the construction and evaluation of our model to make our work more reproducible. Python programming language has been utilized in this study, along with a variety of Python packages and interesting libraries.
 
 ## Background
 Dean De Cock produced the Ames Housing dataset for use in data science courses. It's a fantastic alternative for data scientists looking for an updated and enhanced version of the well-known Boston Housing dataset. Dataset used can be found here https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
