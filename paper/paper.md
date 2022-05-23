@@ -23,46 +23,35 @@ The training dataset comprises 1460 observations and 79 explanatory variables, w
 
 ## Goals of the Study
 The following are the study's primary goals: <br />
-• Build machine learning models capable of predicting property price based on house features  <br />
-• Analyze and compare model performance to select the best model
+- Thoroughly understand the dataset and identify how features interact with each other.
+- Build machine learning models capable of predicting property price based on house features.
+- Analyze and compare model performance to select the best model
 
 ## Methods
-- The Dataset created has multiple features ranging from the Garage area, the basement condition, the living area to the Fireplace quality for the houses. 
-- Examining the data is one of the first and most crucial processes in data analysis. We can observe that there are missing values in the dataset based on the count. We can also see that the mean and standard deviation differences between variables is large.
 
-<img width="1028" alt="Screen Shot 2022-05-13 at 12 02 07 PM" src="https://user-images.githubusercontent.com/39545809/168371039-11ac42b9-8d22-4f72-b422-7b790a714a44.png">
+### Preliminary findings
 
+- At first glance, we noticed that the dataset has about 76 features ranging from the Garage area, the basement condition, location of the house, amenities, the living area to the Fireplace etc. which determine the salesprice of houses. 
+- Examining the data is one of the first and most crucial processes in data analysis. We observed that there are missing values in the dataset based on the count. We have also noticed that the mean and standard deviation differences between variables is large.
 - For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. Missingno is an excellent tool for quickly visualizing missing values. The tool has great filtering functions to select and arrange the variables we want to plot and it allowed us to customize aspects of the chart.
-
-![download](https://user-images.githubusercontent.com/75163512/168749122-99e5dfed-6a2e-4a7a-9bba-7d8152f65c9c.png)
-
 - To better understand the correlation between columns, we plotted a Dendrogram which is essentially a tree-like graph, that group together the columns that have strong correlations in nullity through hierarchical clustering. So it’s like figuring out which fields are highly related to each other in matters of nullity, then testing how those groups of variables relate to themselves and so on. 
 - Again we can notice the discontinued fields, but we can get a more unobstructed view of which variables may be more reliable. The chart illustrates how the groups connect, where connections farther from zero represent combinations of variables that are less similar in nullity.
 
-![download](https://user-images.githubusercontent.com/75163512/168749678-a42faf23-6e9b-4cd9-b2e3-a9e9e3106d6e.png)
-
 
 ### Outliers
+Outliers are cases that are unusual because they fall outside the distribution that is considered normal for the data. The distance from the center of a normal distribution indicates how typical a given point is with respect to the distribution of the data. The presence of outliers can have a deleterious effect on many forms of data mining. Hence, We are trying to find the outliers or abnormal values of two features ‘GrLivArea’ and ‘LotArea’ with respect to the target variable of our dataset i.e., ‘SalePrice’. We considered analyzing these two features because the sale price of a house is majorly dependent on the area of the house and our dataset consists of these two variables that define the area. We used a scatter plot to visualize the data points and observed the distribution. After careful observation and analysis we defined a range to our features, where all the data points that fall within the range are considered useful to our further analysis and all the points that fall outside the range can be considered outliers and can be safely removed from our dataset. 
 
 ### Logarithmic Transformation
 
-As part of Feature Engineering we are performing 'Logarithm transformation' of skewed target variable - 'SalePrice'
-
-Log-transformation is a technique used to perform Feature Transformation. It is one of the many techniques that can be used to transform the features so that they are treated equally. This method helps to handle skewed data and after transformation, the distribution becomes more approximate to normal. Log-Tranform method is majorly used to decreases the effect of the outliers, due to the normalization of magnitude differences so that the model becomes more robust.
-
-Why do we want models to treat them equally? It is because when we input these features to the model, there is a posibillity that a larger value in an imbalance feature will influence the result more and further affect the model performance. This is not something we will want as each and every row of data are equally important as a predictor.
-
-We wouldn't want the model to prioritize predicting only data with higher sale prices. Hence, scaling and transforming is important for algorithms where distance between the data points is important.
-
-We picked log-transformation here as it has the power to alter the skewness of a distribution towards normality. We were able to observe how log-transformation of a feature could transform the data distribution and scale.
-
-We first plotted a distribution plot where we compared the distribution of our target variable with a normal distribution. We were ble to observe that it was right-skewed. After the log transformation, we again plotted a graph with respect to the quantiles of our target feature against the quantiles of a normal distribution. We've just applied a log transformation to the 'SalePrice' variable, reducing its skew and resulting in a more or less regularly distributed variable. 
-
-Notice how it changes after we apply log transformation onto our feature.
+- As part of Feature Engineering we are performing 'Logarithm transformation' of skewed target variable - 'SalePrice'
+- Log-transformation is a technique used to perform Feature Transformation. It is one of the many techniques that can be used to transform the features so that they are treated equally. This method helps to handle skewed data and after transformation, the distribution becomes more approximate to normal. Log-Tranform method is majorly used to decreases the effect of the outliers, due to the normalization of magnitude differences so that the model becomes more robust.
+- Why do we want models to treat them equally? It is because when we input these features to the model, there is a posibillity that a larger value in an imbalance feature will influence the result more and further affect the model performance. This is not something we will want as each and every row of data are equally important as a predictor.
+- We wouldn't want the model to prioritize predicting only data with higher sale prices. Hence, scaling and transforming is important for algorithms where distance between the data points is important.
+- We picked log-transformation here as it has the power to alter the skewness of a distribution towards normality. We were able to observe how log-transformation of a feature could transform the data distribution and scale.
+- We first plotted a distribution plot where we compared the distribution of our target variable with a normal distribution. We were ble to observe that it was right-skewed. After the log transformation, we again plotted a graph with respect to the quantiles of our target feature against the quantiles of a normal distribution. We've just applied a log transformation to the 'SalePrice' variable, reducing its skew and resulting in a more or less regularly distributed variable. 
 
 ### Imputation of Null values
 - The housing data comprised of both Numerical and Categorical columns and there were null values that needed to be cleaned and imputed in both of them.
-
 - For the ease of handling the data, we first split it in to both numerical and categorical columns.
 - We then verified if the data was split appropriately by displaying the data type of each of these columns.
 - We wrote a script to loop through the data set individually for categorical and Numerical columns, and displayed the unique values for each of the columns.
@@ -78,25 +67,18 @@ Notice how it changes after we apply log transformation onto our feature.
 - Constant features show similar/single values in all the observations in the dataset. We concluded the features which provide no information that allows ML models to predict the target and dropped them from our dataset.
 
 ### Label Encoding
-- The extracted unique_vals dataset contains information on the categorical columns and the count of unique values in each of these columns. Using this dataset we were able to plot bar charts and analyse the data : 
-
-![image](https://user-images.githubusercontent.com/75163512/168752086-dd612b59-3cbd-44c6-9563-18ee0ec47ac2.png)
-
+- The extracted unique_vals dataset contains information on the categorical columns and the count of unique values in each of these columns. Using this dataset we were able to plot bar charts and analyse the data. 
 - We concluded that few of these categorical columns (which contained less than 9 unique values) can be encoded by label encoder and we converted these columns to numeric.
 
 ### Feature Addition
-we determined that combining few features to create new features would lead us with qualitative data. We understood that a Sale Price of a house is proportional to age of the house, so we generated a new feature based on house-built year and house sold year to determine the age of the house.
+We determined that combining few features to create new features would lead us with qualitative data. We understood that a Sale Price of a house is proportional to age of the house, so we generated a new feature based on house-built year and house sold year to determine the age of the house.
 
-### Data Correlation
-![166649613-f39ffe39-5853-4217-881a-01b0ac4745f9](https://user-images.githubusercontent.com/75163512/168747937-9d5d2045-c4dd-4c81-b048-a2166e050696.png)
-
-### Exploratory Data Analysis
-We used visuals to explore the data in this part. This helped us better comprehend the data and the relationships between variables, allowing us to develop a more accurate model.
+### Data Correlation and Exploratory Data Analysis
+- We used visuals to explore the data in this part. This helped us better comprehend the data and the relationships between variables, allowing us to develop a more accurate model.
 Our data set contains 80 columns. It would take a long time to visualize all of the data. Hence we looked in to variables that are strongly associated (both positively and negatively) with our goal variable, "SalePrice." We generated a heatmap of connected data to help us think visually.
 From the heat map we were able to conclude that, the garage space, general living area, and overall quality metric are all substantially connected with our goal variable. We then went ahead and visualized each of these column data with our target variable to better our understanding of the relation between them. 
 
-From the above visualizations, we were able to conclude that
-
+#### From the data visualizations, we were able to conclude that :
 - 'SalePrice' and 'GarageArea' have a linear connection so does OverallQual and SalePrice.
 - The distribution of 'YearBuilt' is biased towards the year 2000 and has a lengthy tail that stretches till 1900, according to the univariate plot. In the case of newly constructed residences, the linear link between the factors is more obvious.
 - GarageYrBlt is similarly substantially negatively linked with the target variable, therefore there was no discernible trend in the data.
@@ -106,6 +88,18 @@ From the above visualizations, we were able to conclude that
 - There's strong link between 'SalePrice' and 'GrLivArea.'
 
 # Comparisons
+## 1. Performance Metrics:
+- Root mean squared error : Root mean squared error is the measure of how far the data points are from the regression line. Lower the root mean squared error, the better.
+- Cross-validation score : Cross-validation score is used primarily to test the performance of the model when it is used to predict unseen data. Lower the cross-validation score, the better
+- R-squared  score : R-squared score is the measure of how close the data points are to the regression line. Higher the r-square score, the better. It lies in the range of 0 to 1.
+
+Note: Since we are calculating the root- mean squared error on the training data itself, it is important to have a cross-validation score to make sure the model is able to perform well on non-trained data.
+
+## 2. Comparison:
+Amongst all the models that we have to predict the house prices, stacking model is the winner because it has a relatively low cross validation and root mean squared error scores and a very high r-squared score.  Fig. 19 depicts the performance of stacking model with respect to all the other models.
+
+Observations: This graph gives us a clear view of which regression model worked best for predicting house prices. It takes into consideration three different metrics namely root mean squared error, cross-validation scores and r-squared scores for all of the different regression models, and we can successfully infer that stacking model works best for this dataset.
+
 
 # Example Analysis
 
