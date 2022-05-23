@@ -6,10 +6,15 @@ Guidance (San José State University) : Prof. Carlos Rojas
 ---
 
 
-# Abstract
+## Abstract
+Building a machine learning model that can predict the house prices based on various describing attributes. The dataset used is the Ames Housing dataset. It contains of 79 explanatory variables which describe every aspect of residential homes in Ames, Iowa. The data is first cleaned and then imputed in different machine learning models for comparison of their performance. Through the data analysis and observations summarized in this paper, a machine learning model which can effectively predict the housing prices is finalized and used for house price prediction, with the understanding that the algorithm can still be improved using advanced machine learning algorithms.
 
 ## Introduction
-Every day, thousands of homes are sold. There are some questions that every buyer asks himself, such as: What is the true value of this home? Is the price I'm paying reasonable? A machine learning model is proposed in this research to forecast a property price based on data about the house (size, year it was built, etc.). We will show the code used for each stage followed by its results during the construction and evaluation of our model. Our work will be more reproducible as a result of this. The Python programming language will be utilized in this study, along with a variety of Python packages.
+Every day, thousands of houses are sold but there are questions that every buyer asks, such as: *What is the true value of this house? Is the price I'm paying reasonable?* A machine learning model is proposed in this research to forecast a property price based on data about the house (size, construction details, age, amenities etc.) We present the code used at each stage followed by the results obtained during the construction and evaluation of our model to make our work more reproducible. Python programming language has been utilized in this study, along with a variety of Python packages and interesting libraries.
+
+Our team project focuses on building an effective machine learning model which can reasonably predict the house prices in Ames, Iowa. With the increase and rise of property and real estate prices not only in United States but everywhere in the world, it is vital to conduct this analysis. According to our research, the house prices cannot be dependent on just a few factors but there can be several different features which may overall affect the price of the house. Also, house prices almost never can be predicted effectively using just a few variables. Houses have a variant number of features that may not have the same cost due to its location. For instance, a big house may have a higher price if it is located in desirable rich area than being placed in a poor neighborhood. We strived to identify these significant factors that house in Iowa are dependent on and create a model which is reasonably able to predict the house prices. 
+The data used in the experiment will be handled by using a combination of pre-processing methods to improve the prediction accuracy. In addition, some factors will be added to the local dataset in order to study the relationship between these factors and the sale price in Ames.
+Different types of machine learning models were used and compared with each other to find the best performing model for this dataset. We were able to identify a model which was capable of identifying the house prices with reasonable accuracy.
 
 ## Background
 Dean De Cock produced the Ames Housing dataset for use in data science courses. It's a fantastic alternative for data scientists looking for an updated and enhanced version of the well-known Boston Housing dataset. Dataset used can be found here https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
@@ -27,11 +32,12 @@ The following are the study's primary goals: <br />
 
 <img width="1028" alt="Screen Shot 2022-05-13 at 12 02 07 PM" src="https://user-images.githubusercontent.com/39545809/168371039-11ac42b9-8d22-4f72-b422-7b790a714a44.png">
 
-For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. 
+- For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. Missingno is an excellent tool for quickly visualizing missing values. The tool has great filtering functions to select and arrange the variables we want to plot and it allowed us to customize aspects of the chart.
 
 ![download](https://user-images.githubusercontent.com/75163512/168749122-99e5dfed-6a2e-4a7a-9bba-7d8152f65c9c.png)
 
-- To better understand the correlation between columns we plotted a Dendogram which is essentially a tree-like graph, that group together the columns that have strong correlations in nullity through hierarchical clustering.
+- To better understand the correlation between columns, we plotted a Dendrogram which is essentially a tree-like graph, that group together the columns that have strong correlations in nullity through hierarchical clustering. So it’s like figuring out which fields are highly related to each other in matters of nullity, then testing how those groups of variables relate to themselves and so on. 
+- Again we can notice the discontinued fields, but we can get a more unobstructed view of which variables may be more reliable. The chart illustrates how the groups connect, where connections farther from zero represent combinations of variables that are less similar in nullity.
 
 ![download](https://user-images.githubusercontent.com/75163512/168749678-a42faf23-6e9b-4cd9-b2e3-a9e9e3106d6e.png)
 
@@ -54,10 +60,6 @@ We first plotted a distribution plot where we compared the distribution of our t
 
 Notice how it changes after we apply log transformation onto our feature.
 
-### Variance
-
-- After performing the column wise variance plotting for all the columns. We eliminated few columns in which the distribution of data was very uneven.
-
 ### Imputation of Null values
 - The housing data comprised of both Numerical and Categorical columns and there were null values that needed to be cleaned and imputed in both of them.
 
@@ -68,6 +70,12 @@ Notice how it changes after we apply log transformation onto our feature.
 - Those columns that contained nan or null in hte Numerical split was either replaced with 0, Mean or Median based on the characteristic of the column, whichever was more appropriate.
 - For example: Because the area of each street connected to the house property is most likely similar to the area of other houses in the neighborhood, we may fill in missing numbers by using the community's median LotFrontage. Replacing missing data with 0 in case of GarageType, GarageFinish, GarageQual and GarageCond (Since No garage = no cars in such garage.) etc.
 -  Thus we **imputed** the data for selected columns after checking unique values in each of the columns and replacing with those which we felt most accurate. We later extracted data for columns which contained less than or equal to 9 unique values and extracted to a csv file to read and understand the data better for encoding.
+
+### Column-Wise Variance Plotting
+- Whenever there are columns in a data frame with only one distinct value, those columns will have zero variance. In fact the reverse is true too; a zero variance column will always have exactly one distinct value. The proof of the former statement follows directly from the definition of variance. The proof of the reverse, however, is based on measure theory - specifically that if the expectation of a non-negative random variable is zero then the random variable is equal to zero.
+- The existance of zero variance columns in a data frame seemed benign in predicting house prices.
+- We performed variance plotting for all categorical columns to indentify any uneven distribution of data.
+- Constant features show similar/single values in all the observations in the dataset. We concluded the features which provide no information that allows ML models to predict the target and dropped them from our dataset.
 
 ### Label Encoding
 - The extracted unique_vals dataset contains information on the categorical columns and the count of unique values in each of these columns. Using this dataset we were able to plot bar charts and analyse the data : 
