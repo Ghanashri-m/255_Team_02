@@ -39,6 +39,7 @@ The following are the study's primary goals: <br />
 
 
 ### Outliers
+Outliers are cases that are unusual because they fall outside the distribution that is considered normal for the data. The distance from the center of a normal distribution indicates how typical a given point is with respect to the distribution of the data. The presence of outliers can have a deleterious effect on many forms of data mining. Hence, We are trying to find the outliers or abnormal values of two features ‘GrLivArea’ and ‘LotArea’ with respect to the target variable of our dataset i.e., ‘SalePrice’. We considered analyzing these two features because the sale price of a house is majorly dependent on the area of the house and our dataset consists of these two variables that define the area. We used a scatter plot to visualize the data points and observed the distribution. After careful observation and analysis we defined a range to our features, where all the data points that fall within the range are considered useful to our further analysis and all the points that fall outside the range can be considered outliers and can be safely removed from our dataset. 
 
 ### Logarithmic Transformation
 
