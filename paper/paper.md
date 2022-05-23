@@ -73,9 +73,7 @@ Outliers are cases that are unusual because they fall outside the distribution t
 ### Feature Addition
 We determined that combining few features to create new features would lead us with qualitative data. We understood that a Sale Price of a house is proportional to age of the house, so we generated a new feature based on house-built year and house sold year to determine the age of the house.
 
-### Data Correlation
-
-### Exploratory Data Analysis
+### Data Correlation and Exploratory Data Analysis
 - We used visuals to explore the data in this part. This helped us better comprehend the data and the relationships between variables, allowing us to develop a more accurate model.
 Our data set contains 80 columns. It would take a long time to visualize all of the data. Hence we looked in to variables that are strongly associated (both positively and negatively) with our goal variable, "SalePrice." We generated a heatmap of connected data to help us think visually.
 From the heat map we were able to conclude that, the garage space, general living area, and overall quality metric are all substantially connected with our goal variable. We then went ahead and visualized each of these column data with our target variable to better our understanding of the relation between them. 
