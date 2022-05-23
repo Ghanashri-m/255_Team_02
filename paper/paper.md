@@ -23,8 +23,9 @@ The training dataset comprises 1460 observations and 79 explanatory variables, w
 
 ## Goals of the Study
 The following are the study's primary goals: <br />
-• Build machine learning models capable of predicting property price based on house features  <br />
-• Analyze and compare model performance to select the best model
+- Thoroughly understand the dataset and how features interact with each other.
+- Build machine learning models capable of predicting property price based on house features.
+- Analyze and compare model performance to select the best model
 
 ## Methods
 - The Dataset created has multiple features ranging from the Garage area, the basement condition, the living area to the Fireplace quality for the houses. 
