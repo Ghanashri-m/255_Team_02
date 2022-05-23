@@ -29,10 +29,10 @@ The following are the study's primary goals: <br />
 
 ## Methods
 
-###Preliminary findings
+### Preliminary findings
 
-- The Dataset created has multiple features ranging from the Garage area, the basement condition, the living area to the Fireplace quality for the houses. 
-- Examining the data is one of the first and most crucial processes in data analysis. We can observe that there are missing values in the dataset based on the count. We have also noticed that the mean and standard deviation differences between variables is large.
+- At first glance, we noticed that the dataset has about 76 features ranging from the Garage area, the basement condition, location of the house, amenities, the living area to the Fireplace etc. which determine the salesprice of houses. 
+- Examining the data is one of the first and most crucial processes in data analysis. We observed that there are missing values in the dataset based on the count. We have also noticed that the mean and standard deviation differences between variables is large.
 - For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. Missingno is an excellent tool for quickly visualizing missing values. The tool has great filtering functions to select and arrange the variables we want to plot and it allowed us to customize aspects of the chart.
 - To better understand the correlation between columns, we plotted a Dendrogram which is essentially a tree-like graph, that group together the columns that have strong correlations in nullity through hierarchical clustering. So it’s like figuring out which fields are highly related to each other in matters of nullity, then testing how those groups of variables relate to themselves and so on. 
 - Again we can notice the discontinued fields, but we can get a more unobstructed view of which variables may be more reliable. The chart illustrates how the groups connect, where connections farther from zero represent combinations of variables that are less similar in nullity.
