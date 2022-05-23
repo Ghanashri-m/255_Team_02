@@ -32,11 +32,12 @@ The following are the study's primary goals: <br />
 
 <img width="1028" alt="Screen Shot 2022-05-13 at 12 02 07 PM" src="https://user-images.githubusercontent.com/39545809/168371039-11ac42b9-8d22-4f72-b422-7b790a714a44.png">
 
-For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. 
+- For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. Missingno is an excellent tool for quickly visualizing missing values. The tool has great filtering functions to select and arrange the variables we want to plot and it allowed us to customize aspects of the chart.
 
 ![download](https://user-images.githubusercontent.com/75163512/168749122-99e5dfed-6a2e-4a7a-9bba-7d8152f65c9c.png)
 
-- To better understand the correlation between columns we plotted a Dendogram which is essentially a tree-like graph, that group together the columns that have strong correlations in nullity through hierarchical clustering.
+- To better understand the correlation between columns, we plotted a Dendrogram which is essentially a tree-like graph, that group together the columns that have strong correlations in nullity through hierarchical clustering. So it’s like figuring out which fields are highly related to each other in matters of nullity, then testing how those groups of variables relate to themselves and so on. 
+- Again we can notice the discontinued fields, but we can get a more unobstructed view of which variables may be more reliable. The chart illustrates how the groups connect, where connections farther from zero represent combinations of variables that are less similar in nullity.
 
 ![download](https://user-images.githubusercontent.com/75163512/168749678-a42faf23-6e9b-4cd9-b2e3-a9e9e3106d6e.png)
 
