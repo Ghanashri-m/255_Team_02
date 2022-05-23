@@ -59,10 +59,6 @@ We first plotted a distribution plot where we compared the distribution of our t
 
 Notice how it changes after we apply log transformation onto our feature.
 
-### Variance
-
-- After performing the column wise variance plotting for all the columns. We eliminated few columns in which the distribution of data was very uneven.
-
 ### Imputation of Null values
 - The housing data comprised of both Numerical and Categorical columns and there were null values that needed to be cleaned and imputed in both of them.
 
@@ -73,6 +69,12 @@ Notice how it changes after we apply log transformation onto our feature.
 - Those columns that contained nan or null in hte Numerical split was either replaced with 0, Mean or Median based on the characteristic of the column, whichever was more appropriate.
 - For example: Because the area of each street connected to the house property is most likely similar to the area of other houses in the neighborhood, we may fill in missing numbers by using the community's median LotFrontage. Replacing missing data with 0 in case of GarageType, GarageFinish, GarageQual and GarageCond (Since No garage = no cars in such garage.) etc.
 -  Thus we **imputed** the data for selected columns after checking unique values in each of the columns and replacing with those which we felt most accurate. We later extracted data for columns which contained less than or equal to 9 unique values and extracted to a csv file to read and understand the data better for encoding.
+
+### Column-Wise Variance Plotting
+- Whenever there are columns in a data frame with only one distinct value, those columns will have zero variance. In fact the reverse is true too; a zero variance column will always have exactly one distinct value. The proof of the former statement follows directly from the definition of variance. The proof of the reverse, however, is based on measure theory - specifically that if the expectation of a non-negative random variable is zero then the random variable is equal to zero.
+- The existance of zero variance columns in a data frame seemed benign in predicting house prices.
+- We performed variance plotting for all categorical columns to indentify any uneven distribution of data.
+- Constant features show similar/single values in all the observations in the dataset. We concluded the features which provide no information that allows ML models to predict the target and dropped them from our dataset.
 
 ### Label Encoding
 - The extracted unique_vals dataset contains information on the categorical columns and the count of unique values in each of these columns. Using this dataset we were able to plot bar charts and analyse the data : 
