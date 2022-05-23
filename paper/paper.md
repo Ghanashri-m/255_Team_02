@@ -28,6 +28,9 @@ The following are the study's primary goals: <br />
 - Analyze and compare model performance to select the best model
 
 ## Methods
+
+###Preliminary findings
+
 - The Dataset created has multiple features ranging from the Garage area, the basement condition, the living area to the Fireplace quality for the houses. 
 - Examining the data is one of the first and most crucial processes in data analysis. We can observe that there are missing values in the dataset based on the count. We have also noticed that the mean and standard deviation differences between variables is large.
 - For clear visualization of the missing data, we were also able to identify count of null values in columns by plotting a Missingno graph. Missingno is an excellent tool for quickly visualizing missing values. The tool has great filtering functions to select and arrange the variables we want to plot and it allowed us to customize aspects of the chart.
