@@ -88,6 +88,18 @@ From the heat map we were able to conclude that, the garage space, general livin
 - There's strong link between 'SalePrice' and 'GrLivArea.'
 
 # Comparisons
+## 1. Performance Metrics:
+- Root mean squared error : Root mean squared error is the measure of how far the data points are from the regression line. Lower the root mean squared error, the better.
+- Cross-validation score : Cross-validation score is used primarily to test the performance of the model when it is used to predict unseen data. Lower the cross-validation score, the better
+- R-squared  score : R-squared score is the measure of how close the data points are to the regression line. Higher the r-square score, the better. It lies in the range of 0 to 1.
+
+Note: Since we are calculating the root- mean squared error on the training data itself, it is important to have a cross-validation score to make sure the model is able to perform well on non-trained data.
+
+## 2. Comparison:
+Amongst all the models that we have to predict the house prices, stacking model is the winner because it has a relatively low cross validation and root mean squared error scores and a very high r-squared score.  Fig. 19 depicts the performance of stacking model with respect to all the other models.
+
+Observations: This graph gives us a clear view of which regression model worked best for predicting house prices. It takes into consideration three different metrics namely root mean squared error, cross-validation scores and r-squared scores for all of the different regression models, and we can successfully infer that stacking model works best for this dataset.
+
 
 # Example Analysis
 
