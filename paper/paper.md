@@ -146,7 +146,7 @@ From the heat map we were able to conclude that, the garage space, general livin
 
 Note: Since we are calculating the root- mean squared error on the training data itself, it is important to have a cross-validation score to make sure the model is able to perform well on non-trained data.
 
-## MODELS PERFORMANE ANALYSIS :
+## MODELS PERFORMANCE ANALYSIS :
 Through analysis, we concluded that the stacking regression model worked best for predicting house prices. It takes into consideration all the performance metrics and we have successfully inferred that stacking model works best for this dataset. The stacking model outperforms all other models for predicting house prices because it has relatively low cross-validation and root mean squared error scores, as well as a very high r-squared score. The table below depicts the performance of the stacking model in comparison to all other models.
 
 ![image](https://user-images.githubusercontent.com/75163512/169925182-7048c003-ce80-4948-b1d6-fbe8c00a64fa.png)
@@ -169,4 +169,4 @@ Through analysis, we concluded that the stacking regression model worked best fo
 [8] Qiu Q. Housing price in Beijing. Kaggle 2018. https://www.kaggle.com/ruiqurm/lianjia/ (accessed June 1, 2019). 
 [9] Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel O, et al. Scikit-learn: Machine Learning in Python. The Journal of Machine Learning Research 2011;12:2825–30
 
-![image](https://user-images.githubusercontent.com/99863530/169953440-1e223fb1-27e2-4453-8098-3b63b0243645.png)
+
