@@ -95,7 +95,7 @@ From the heat map we were able to conclude that, the garage space, general livin
 
 Note: Since we are calculating the root- mean squared error on the training data itself, it is important to have a cross-validation score to make sure the model is able to perform well on non-trained data.
 
-## Analysis :
+## Analysis of Models:
 Through analysis, we concluded that the stacking regression model worked best for predicting house prices. It takes into consideration all the performance metrics and we have successfully inferred that stacking model works best for this dataset. The stacking model outperforms all other models for predicting house prices because it has relatively low cross-validation and root mean squared error scores, as well as a very high r-squared score. The graph below depicts the performance of the stacking model in comparison to all other models.
 
 
