@@ -152,11 +152,8 @@ Through analysis, we concluded that the stacking regression model worked best fo
 ![image](https://user-images.githubusercontent.com/75163512/169925182-7048c003-ce80-4948-b1d6-fbe8c00a64fa.png)
 
 
-
-# EXAMPLE ANALYSIS
-
 # CONCLUSIONS
-
+Through analysis, we concluded that the stacking regression model worked best for predicting house prices. It takes into consideration all the performance metrics and we have successfully inferred that stacking model works best for this dataset. The stacking model outperforms all other models for predicting house prices because it has relatively low cross-validation and root mean squared error scores, as well as a very high r-squared score. The table below depicts the performance of the stacking model in comparison to all other models.
 
 # REFERENCES
 [1] House Price Index. Federal Housing Finance Agency. https://www.fhfa.gov/ (accessed September 1, 2019). 
