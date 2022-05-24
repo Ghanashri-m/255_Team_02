@@ -1,9 +1,13 @@
 
 ---
-TITLE : HOUSE PRICE PREDICTION
-DATE : "Spring 2022"
-AUTHORS (SAN JOSE STATE UNIVERISTY) : Prashanth Adapa, Ghanashri Mariyanna, Akshara Narayana, Pratik Dabre
-GUIDANCE (SAN JOSE STATE UNIVERSITY) : Prof. Carlos Rojas
+## TITLE : HOUSE PRICE PREDICTION <br />
+## DATE : "Spring 2022" <br />
+## AUTHORS (SAN JOSE STATE UNIVERISTY) : 
+Prashanth Adapa, <br />
+Ghanashri Mariyanna, <br />
+Akshara Narayana, <br />
+Pratik Dabre<br />
+## GUIDANCE (SAN JOSE STATE UNIVERSITY) : Prof. Carlos Rojas
 ---
 
 
