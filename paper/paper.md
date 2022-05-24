@@ -153,17 +153,27 @@ Through analysis, we concluded that the stacking regression model worked best fo
 
 
 # CONCLUSIONS
-Through analysis, we concluded that the stacking regression model worked best for predicting house prices. It takes into consideration all the performance metrics and we have successfully inferred that stacking model works best for this dataset. The stacking model outperforms all other models for predicting house prices because it has relatively low cross-validation and root mean squared error scores, as well as a very high r-squared score. The table below depicts the performance of the stacking model in comparison to all other models.
+- In this house price prediction analysis, we looked at 9 different regression algorithms , identifying the most significant factors affecting the house price prediction dataset and finding a regression model which was able to predict the house prices reasonably well.
+- The performance of stacking is usually close to the best model and sometimes it can outperform the prediction performance of each individual model. The stacked regressor will combine the strengths of the different regressors. However, we also see that training the stacked regressor is much more computationally expensive.
+- Based on all these factors we can conclude that th future scope of this project woule be to find an reasonably well performing model like stacking model but one that is not computationally expensive.
 
 # REFERENCES
 [1] House Price Index. Federal Housing Finance Agency. https://www.fhfa.gov/ (accessed September 1, 2019). 
+
 [2] Fan C, Cui Z, Zhong X. House Prices Prediction with Machine Learning Algorithms. Proceedings of the 2018 10th International Conference on Machine Learning and Computing - ICMLC 2018. doi:10.1145/3195106.3195133. 
+
 [3] Phan TD. Housing Price Prediction Using Machine Learning Algorithms: The Case of Melbourne City, Australia. 2018 International Conference on Machine Learning and Data Engineering (ICMLDE) 2018. doi:10.1109/icmlde.2018.00017. 
+
 [4] Mu J, Wu F, Zhang A. Housing Value Forecasting Based on Machine Learning Methods. Abstract and Applied Analysis 2014;2014:1–7. doi:10.1155/2014/648047. 
+
 [5] Lu S, Li Z, Qin Z, Yang X, Goh RSM. A hybrid regression technique for house prices prediction. 2017 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM) 2017. doi:10.1109/ieem.2017.8289904. 
+
 [6] Ivanov I. vecstack. GitHub 2016. https://github.com/vecxoz/vecstack (accessed June 1, 2019). [Accessed: 01-June-2019]. 
+
 [7] Wolpert DH. Stacked generalization. Neural Networks 1992;5:241–59. doi:10.1016/s0893-6080(05)80023-1. 
+
 [8] Qiu Q. Housing price in Beijing. Kaggle 2018. https://www.kaggle.com/ruiqurm/lianjia/ (accessed June 1, 2019). 
+
 [9] Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel O, et al. Scikit-learn: Machine Learning in Python. The Journal of Machine Learning Research 2011;12:2825–30
 
 
